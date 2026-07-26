@@ -210,7 +210,7 @@ nbformat
 
 ## Results snapshot
 
-Cell 6.8 writes `results_metrics.json`:
+Results are delivered withing Cell 6.8 and writes as `results_metrics.json`:
 
 ```json
 {
