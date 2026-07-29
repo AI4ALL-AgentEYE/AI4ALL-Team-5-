@@ -1,4 +1,4 @@
-# Security Risk Assessment for Agentic AI Models
+# AgentEYE: Security Risk Assessment for Agentic AI Models
 
 Auditing an automated **agent security risk-scoring system** with a four-model
 triangulation pipeline. Rather than build a risk score from scratch, this project
