@@ -1,1 +1,15 @@
 .ipynb_checkpoints/
+
+# Local-only working notes (not for upstream)
+documentation/
+
+# Editor / IDE settings (personal, not project)
+.vscode/
+.claude/
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment / secrets
+.env
