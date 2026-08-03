@@ -35,7 +35,7 @@ understanding and the trials we ran. Here is what each is:
 
 | Notebook | Role |
 |---|---|
-| **`agent_security_risk_analysis.ipynb`** | ⭐ **FINAL / primary analysis.** The two-model pipeline the presentation is built on. Start here. |
+| **`agenteye_final_analysis.ipynb`** | ⭐ **FINAL / primary analysis.** The two-model pipeline the presentation is built on. Start here. |
 | `ai4all_data_analysis_notebook.ipynb` | **EDA & bias companion** — data cleaning, distributions, fairness checks. |
 | `ai4all-team-project.ipynb` | **Additional exploration** — a wider 4-model triangulation experiment (adds a decision tree + isolation forest). Not the final deliverable; kept to show what we tried. |
 
@@ -84,12 +84,16 @@ the score, so they are excluded from the models that predict it.
 .
 ├── README.md
 ├── DATA_NOTICE.md                        # data source, vendoring & licensing note
+├── requirements.txt                      # core dependencies
+├── requirements-full.txt                 # core + legacy tooling (nbformat, kagglehub)
 ├── data/
 │   ├── agent_security_risk_scores.csv          # raw dataset
 │   └── cleaned_agent_security_risk_scores.csv  # cleaned version
-├── agent_security_risk_analysis.ipynb    # ⭐ FINAL analysis (start here)
+├── agenteye_final_analysis.ipynb         # ⭐ FINAL analysis (start here)
 ├── ai4all_data_analysis_notebook.ipynb   # EDA & bias companion
 ├── ai4all-team-project.ipynb             # additional 4-model exploration
+├── presentation_visualizations.ipynb     # regenerates the slide charts
+├── visualizations/                       # exported slide chart PNGs
 ├── datacleaninganalysis.py               # script version of the EDA
 └── build_notebook.py                     # legacy generator (pending author review)
 ```
@@ -99,11 +103,14 @@ the score, so they are excluded from the models that predict it.
 The notebooks now read the dataset **locally** from `data/` — no Kaggle account, credentials,
 or internet needed.
 
-1. Open **`agent_security_risk_analysis.ipynb`**.
-2. Run all cells top to bottom. The load cell reads `data/agent_security_risk_scores.csv`.
-
-Requires Python 3.11–3.12 and the usual data-science stack (`pandas`, `numpy`, `matplotlib`,
-`seaborn`, `scikit-learn`, `xgboost`, `shap`). *A pinned `requirements.txt` will be added.*
+1. Install dependencies (Python 3.11–3.12 recommended):
+   ```bash
+   pip install -r requirements.txt
+   ```
+   > Use `requirements-full.txt` instead if you also want to run the legacy `build_notebook.py`
+   > (it additionally needs `nbformat` and `kagglehub`).
+2. Open **`agenteye_final_analysis.ipynb`** and run all cells top to bottom. The load cell
+   reads `data/agent_security_risk_scores.csv`.
 
 ## Limitations
 
