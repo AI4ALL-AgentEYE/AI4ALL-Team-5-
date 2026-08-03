@@ -1,0 +1,11 @@
+# Full environment — the core deps PLUS everything the optional / legacy tooling needs.
+# Use this if you want to be able to run *every* file in the repo, including the legacy
+# notebook generator.
+#
+# Install:  pip install -r requirements-full.txt
+
+-r requirements.txt
+
+# Needed only by build_notebook.py (legacy notebook generator, pending author review)
+nbformat
+kagglehub
