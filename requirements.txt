@@ -1,0 +1,14 @@
+# Core dependencies — everything the maintained notebooks need
+# (final analysis, EDA companion, 4-model exploration, and the visualizations notebook).
+# Recommended: Python 3.11–3.12.
+#
+# Install:  pip install -r requirements.txt
+
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+xgboost
+shap
+fg-data-profiling   # EDA notebook's ProfileReport (renamed successor of ydata-profiling)
