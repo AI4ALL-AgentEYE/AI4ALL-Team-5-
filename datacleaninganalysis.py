@@ -35,10 +35,6 @@ Load Dataset
 # IMPORT LIBRARIES
 # ============================================================
 
-from dotenv import load_dotenv
-import os
-
-import kagglehub
 import numpy as np
 import pandas as pd
 
@@ -52,19 +48,9 @@ plt.style.use("ggplot")
 # LOAD DATASET
 # ============================================================
 
-# Load environment variables (.env file)
-load_dotenv()
-
-# Download the latest version of the dataset from KaggleHub
-path = kagglehub.dataset_download(
-    "algozee/agentic-ai-security-risk-dataset"
-)
-
-print("Dataset location:", path)
-print("Files:", os.listdir(path))
-
-# Read the CSV file into a pandas DataFrame
-csv_file = os.path.join(path, "agent_security_risk_scores.csv")
+# Read the dataset from the local data/ folder
+# (vendored in-repo because the Kaggle source was removed - see DATA_NOTICE.md)
+csv_file = "data/agent_security_risk_scores.csv"
 df = pd.read_csv(csv_file)
 
 # ============================================================

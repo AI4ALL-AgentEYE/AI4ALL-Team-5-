@@ -13,3 +13,7 @@ venv/
 
 # Environment / secrets
 .env
+
+# Python bytecode
+__pycache__/
+*.pyc
