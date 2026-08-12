@@ -12,3 +12,4 @@ scikit-learn
 xgboost
 shap
 fg-data-profiling   # EDA notebook's ProfileReport (renamed successor of ydata-profiling)
+plotly
